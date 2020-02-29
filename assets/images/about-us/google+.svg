@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" width="35" height="35">
+	<defs>
+		<image width="35" height="35" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAEyklEQVRYR81YTWwbVRD+Zu2kjZSoAS78iMq+IC6lQeUAAkp6rFRBOZSC1IIDdqiCt90gkXXUQ8yhijdIxMmaqHhdYugBlR6aigqOCbRIXFANvXFoLEC0EkK4qkVI7X2Dnu211o5jryNU+m5ezcz73jf/JtxDh7rB8mbUeFhR6AAx7wWwC8BOAIM1GwUAvwC4xkTfCsGXPknpv3dj3xOYsGo8rQAaA4cZfBGCVkAiVy4jnz09mZcXho5NB/x+BMDKEBQeJtBLBJwTQDJj6t97AdUWzKFDX/gGH1xNgvkog5Pl4noym41LBjqeUCg+6O/fphFIA9HZws2gdv78K3Y7xU3BhE988AQJ8RmzyJWL65pXEM2XVUANbM8SKMCK8npm7r2fNgPUEszo8cRzzHSJBeKZj/RkRxo8CITfMTRSECfiA+n52JVWKhvAjEYTu5joMiA0y5zMerjHs0hEnQ4BSpKYn0+nYteaFTeAiajGDyxw9r9ipPnCGkNHLVPf0xZM5HjiQxZ8fyY1GfL83C0IhtXEEhGuW/Oxd93qdWbeVhO7BeObUvGfwFaD1SsuGdQ9/dvzCuGFj83Yj45eHUxETZxh5l8zqcn4ZkZD2uxgj70+C5CbuQLAS5YZG/EKRsqFo9NxInrUMmNvNYAZG4v3l3x9t0q31x5ox0okalwFYZBZjBD5AgAvSkM+nwieTlaLn9dTYWeg788ee23HwkK8KPUqzITVmdcAcThjxg5uZiwcnR4mUpaJ8H56Xq+wF1ETi5IlZrEvk5pc8QrEkZOxAyjnMubE524wCxD8c7sMGj1uxJkxRUAyberjUtn55gYTUQ0GaMUyJ/Z1AiczCwo9ljEnxupgIqrxHbM42e51DjMACiVfbzCbHC84zLjd1BWYKtunLFN/1sWMcaNcEs84TW+zF9ViZghAHuAV6SLJFPvoU9iYrerxsAQMUE7+asdQZOzUEPv8X2dM/SE3M2XL1P2daJXZ5LfvhGRHrl2at0w96GJtgwnL1Ns244hq1O+uCLo/dAJUkddmhmDz1RoTWXdad+Om2t3sAK5lk3GD7PJ+a+FkhdpWR7LSK+5ozHgDQMAt05hh3gNYugk+/7Jl6vd1FcARdWa56hrOlnzbxmUAj0aNg0y4IGPEMVjNMMpb5kTHJltz75xl6ru7Su0K/YycldKfdLPiZFSn2GjFdq1pPmWZ+hE3mI5FrxoLqARsIxhjVc7BDjNeYq6h6JHyVWZ+Il0H46Ud1NOakSMFFytJXIsfdyH0CqbWDv6yGY84g7vnRnlMmw7YtiJribtlFIgw57QHr0CknGyUCimPp039VUevYYSwQSvl22vBuzFC+Af6pHv3uzeHhoIkhysIClop/eVuXtmtbCRqXADhN8vU1YYS0WzoLo2docLN4J7m1eV/GchZUfa2WlnariqCeepMKjbXrRta1pSoMUWE8a5WlXoNqC1xYKyWimsjWw3q6rzbtwjCTmIOtVpRNmRTq9c46y0DR8BIlotrc15BVdfbvhMgaES82LwJtLqv68UfjCUBXhG2yPmJbznNVTa9MtMOxacMKaBhEF6UfUwB5t0bQDuXewLjGGjzl4jNwB8EXGeQXD0u99p/f+kM2l5jriswXo1uVe6eAvMvgkeAQgB4uxwAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<g id="About Us">
+		<g id="Social Media">
+			<g id="Google">
+				<use id="Ellipse 2 copy" href="#img1" transform="matrix(1,0,0,1,0,0)"/>
+			</g>
+		</g>
+	</g>
+</svg>
