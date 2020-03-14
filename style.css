@@ -283,6 +283,14 @@ body {
   display: none;
 }
 
+.portfolio-border {
+  border: 5px solid #F06C64;
+}
+
+.portfolio-img:hover {
+  cursor: pointer;
+}
+
 .portfolio-1 {
   background-image: url("assets/images/portfolio/portfolio1.png");
   background-position: -8px -11px;
