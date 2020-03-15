@@ -166,11 +166,11 @@
             <p class="section-description quote-description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <div class="layout-2-column">
               <form action="#" method="POST" class="form-quote">
-                <input class="field-form" type="text" name="user-name" placeholder="Name (Required)" pattern="[A-Za-zА-Яа-я '-]+" required>
-                <input class="field-form" type="email" name="user-email" placeholder="Email (Required)" required>
-                <input class="field-form" type="text" name="subject" placeholder="Subject">
-                <textarea class="field-form field-textarea" name="subject-text" placeholder="Describe your project in detail..."></textarea>
-                <input class="field-form field-submit" type="submit" value="Submit">
+                <input class="field-form" id="name-field" type="text" name="user-name" placeholder="Name (Required)" pattern="[A-Za-zА-Яа-я '-]+" required>
+                <input class="field-form" id="email-field" type="email" name="user-email" placeholder="Email (Required)" required>
+                <input class="field-form" id="subject-field" type="text" name="subject" placeholder="Subject">
+                <textarea class="field-form field-textarea" id="describe-field" name="subject-text" placeholder="Describe your project in detail..."></textarea>
+                <input class="field-form field-submit" id="submit" type="button" value="Submit">
               </form>
               <div class="contact">
                 <h3 class="contact-title">Contact Information</h3>
@@ -193,6 +193,14 @@
                     <p class="contact-link">info@singolo.com</p>
                   </a>
                 </div>
+              </div>
+            </div>
+            <div class="frame-message hidden" id="frame-message">
+              <div class="message">
+                <p>Письмо отправлено</p>
+                <p id="subject-info">Без темы</p>
+                <p id="describe-info">Без описания</p>
+                <p class="ok-btn" id="ok-btn">ok</p>
               </div>
             </div>
           </section>
