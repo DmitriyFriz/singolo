@@ -13,6 +13,11 @@ const describeInfo = document.getElementById('describe-info');
 const frameMessage = document.getElementById('frame-message')
 const okBtn = document.getElementById('ok-btn');
 
+const btnVerIphone =  document.getElementById('button-ver-iphone');
+const btnHorIphone = document.getElementById('button-hor-iphone');
+const screenVerIphone = document.getElementById('screen-ver-iphone');
+const screenHorIphone = document.getElementById('screen-hor-iphone');
+
 // HEADER
 menu.addEventListener('click', (event) => {
   let menuElement = event.target.closest('.navigation-item');
@@ -46,4 +51,21 @@ submitBtn.addEventListener('click', () => {
 
 okBtn.addEventListener('click', () => {
   frameMessage.classList.add('hidden');
+})
+
+//  SLIDER ACTIVE SCREEN
+btnVerIphone.addEventListener('click', () => {
+  if (screenVerIphone.classList.contains('hidden')) {
+    screenVerIphone.classList.remove('hidden');
+    return;
+  }
+  screenVerIphone.classList.add('hidden');
+})
+
+btnHorIphone.addEventListener('click', () => {
+  if (screenHorIphone.classList.contains('hidden')) {
+    screenHorIphone.classList.remove('hidden');
+    return;
+  }
+  screenHorIphone.classList.add('hidden');
 })

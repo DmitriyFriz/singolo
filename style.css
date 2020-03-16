@@ -121,10 +121,53 @@ body {
   left: 112px;
 }
 
+.screen-ver {
+  position: absolute;
+  top: 114px;
+  left: 123px;
+  z-index: 1;
+}
+
+.button-ver {
+  position: absolute;
+  top: 460px;
+  left: 199px;
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.button-ver:hover{
+  cursor: pointer;
+}
+
 .iphone-hor {
   position: absolute;
   top: 174px;
   left: 425px;
+}
+
+.screen-hor {
+  transform: rotate(90deg);
+  position: absolute;
+  top: 112px;
+  left: 554px;
+  z-index: 1;
+}
+
+.button-hor {
+  position: absolute;
+  top: 260px;
+  left: 432px;
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.button-hor:hover{
+  cursor: pointer;
 }
 
 .arrow-right {
