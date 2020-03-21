@@ -6,6 +6,7 @@
 
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -25,9 +26,16 @@ body {
   margin: 0 auto;
 }
 
+section {
+  scroll-margin-top: 95px;
+}
+
 /* HEADER */
 
 .header {
+  position: sticky;
+  top: 0px;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
