@@ -6,6 +6,7 @@
 
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -25,9 +26,16 @@ body {
   margin: 0 auto;
 }
 
+section {
+  scroll-margin-top: 95px;
+}
+
 /* HEADER */
 
 .header {
+  position: sticky;
+  top: 0px;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -121,10 +129,53 @@ body {
   left: 112px;
 }
 
+.screen-ver {
+  position: absolute;
+  top: 114px;
+  left: 123px;
+  z-index: 1;
+}
+
+.button-ver {
+  position: absolute;
+  top: 460px;
+  left: 199px;
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.button-ver:hover{
+  cursor: pointer;
+}
+
 .iphone-hor {
   position: absolute;
   top: 174px;
   left: 425px;
+}
+
+.screen-hor {
+  transform: rotate(90deg);
+  position: absolute;
+  top: 112px;
+  left: 554px;
+  z-index: 1;
+}
+
+.button-hor {
+  position: absolute;
+  top: 260px;
+  left: 432px;
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.button-hor:hover{
+  cursor: pointer;
 }
 
 .arrow-right {
@@ -281,6 +332,14 @@ body {
 
 .portfolio-img:nth-child(n+13) {
   display: none;
+}
+
+.portfolio-border {
+  border: 5px solid #F06C64;
+}
+
+.portfolio-img:hover {
+  cursor: pointer;
 }
 
 .portfolio-1 {
@@ -576,4 +635,50 @@ body {
 .footer-contacts img:hover {
   margin-top: 1.5px;
   cursor: pointer;
+}
+
+/* MESSAGE */
+
+.frame-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0008;
+  position: fixed;
+}
+
+.hidden {
+  display: none;
+}
+
+.message {
+  display: inline-block;
+  text-align: justify;
+  max-width: 50vw;
+  min-width: 300px;
+  background-color: #f6f8fa;
+  padding: 20px 20px 5px 20px;
+  border-radius: 10px;
+}
+
+.message p {
+  margin-bottom: 10px;
+}
+
+.ok-btn {
+  display: inline-block;
+  padding: 0px 2px 0px 1px;
+  border: 1px solid #666d89;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.ok-btn:hover {
+  cursor: pointer;
+  opacity: 0.5;
 }
