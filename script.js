@@ -95,3 +95,63 @@ function onScroll () {
     })
   }
 }
+
+
+// SLIDER
+const sliderHome = document.getElementById('home')
+const arrowLeft = document.getElementById('arrow-left');
+const arrowRight = document.getElementById('arrow-right');
+const slides = document.querySelectorAll('.slide');
+let currentSlide = 0;
+let isEnabled = true;
+
+function changeCurrentSlide(n) {
+  currentSlide = (n + slides.length) % slides.length;
+}
+
+function hideSlide(direction) {
+  isEnabled = false;
+  slides[currentSlide].classList.add(direction);
+  slides[currentSlide].addEventListener('animationend', function() {
+    this.classList.remove('slide-active', direction);
+  })
+}
+
+function showSlide(direction) {
+  slides[currentSlide].classList.add('slide-next', direction);
+  slides[currentSlide].addEventListener('animationend', function() {
+    this.classList.remove('slide-next', direction);
+    this.classList.add('slide-active');
+    isEnabled = true;
+  })
+}
+
+function previousSlide(n) {
+  hideSlide('to-right');
+  changeCurrentSlide(n-1);
+  showSlide('from-left');
+}
+
+function nextSlide(n) {
+  hideSlide('to-left');
+  changeCurrentSlide(n+1);
+  showSlide('from-right');
+}
+
+arrowLeft.addEventListener('click', function() {
+  if (isEnabled) {
+    previousSlide(currentSlide);
+    changeBackground();
+  }
+})
+
+arrowRight.addEventListener('click', function() {
+  if (isEnabled) {
+    nextSlide(currentSlide);
+    changeBackground();
+  }
+})
+
+function changeBackground(){
+  sliderHome.classList.toggle('background-slide-2');
+}
