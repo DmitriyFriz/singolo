@@ -21,6 +21,11 @@ const btnHorIphone = document.getElementById('button-hor-iphone');
 const screenVerIphone = document.getElementById('screen-ver-iphone');
 const screenHorIphone = document.getElementById('screen-hor-iphone');
 
+const burgerButton = document.getElementById('burger-button');
+const burgerOverlay = document.querySelector('.burger-overlay');
+const headerNavigation = document.querySelector('.header-navigation');
+const headerLogo = document.querySelector('.header-logo');
+
 // PORTFOLIO SELECT IMAGE
 portfolioGallery.addEventListener('click', (event) =>{
   if (!(event.target.classList.contains('portfolio-img'))) return;
@@ -155,3 +160,19 @@ arrowRight.addEventListener('click', function() {
 function changeBackground(){
   sliderHome.classList.toggle('background-slide-2');
 }
+
+// BURGER MENU
+burgerButton.addEventListener('click', changeStateBurgerMenu);
+
+function changeStateBurgerMenu(){
+  burgerButton.classList.toggle('burger-button-rotate');
+  burgerOverlay.classList.toggle('visibility');
+  headerNavigation.classList.toggle('visibility');
+  headerLogo.classList.toggle('header-logo-burger')
+}
+
+menu.addEventListener('click', (event) => {
+  let menuElement = event.target.closest('.navigation-item');
+  if (!menuElement) return;
+  changeStateBurgerMenu();
+})
