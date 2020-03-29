@@ -21,6 +21,11 @@ const btnHorIphone = document.getElementById('button-hor-iphone');
 const screenVerIphone = document.getElementById('screen-ver-iphone');
 const screenHorIphone = document.getElementById('screen-hor-iphone');
 
+const burgerButton = document.getElementById('burger-button');
+const burgerOverlay = document.querySelector('.burger-overlay');
+const headerNavigation = document.querySelector('.header-navigation');
+const headerLogo = document.querySelector('.header-logo');
+
 // PORTFOLIO SELECT IMAGE
 portfolioGallery.addEventListener('click', (event) =>{
   if (!(event.target.classList.contains('portfolio-img'))) return;
@@ -86,7 +91,7 @@ function onScroll () {
     }
   });
 
-  if (cursorPosition >= document.documentElement.scrollHeight - document.documentElement.clientHeight) {
+  if (cursorPosition-3 >= document.documentElement.scrollHeight - document.documentElement.clientHeight) {
     let lastItem = listSections[listSections.length-1];
     menuLinks.forEach((link) => {
       let menuElement = link.closest('.navigation-item');
@@ -95,3 +100,79 @@ function onScroll () {
     })
   }
 }
+
+
+// SLIDER
+const sliderHome = document.getElementById('home')
+const arrowLeft = document.getElementById('arrow-left');
+const arrowRight = document.getElementById('arrow-right');
+const slides = document.querySelectorAll('.slide');
+let currentSlide = 0;
+let isEnabled = true;
+
+function changeCurrentSlide(n) {
+  currentSlide = (n + slides.length) % slides.length;
+}
+
+function hideSlide(direction) {
+  isEnabled = false;
+  slides[currentSlide].classList.add(direction);
+  slides[currentSlide].addEventListener('animationend', function() {
+    this.classList.remove('slide-active', direction);
+  })
+}
+
+function showSlide(direction) {
+  slides[currentSlide].classList.add('slide-next', direction);
+  slides[currentSlide].addEventListener('animationend', function() {
+    this.classList.remove('slide-next', direction);
+    this.classList.add('slide-active');
+    isEnabled = true;
+  })
+}
+
+function previousSlide(n) {
+  hideSlide('to-right');
+  changeCurrentSlide(n-1);
+  showSlide('from-left');
+}
+
+function nextSlide(n) {
+  hideSlide('to-left');
+  changeCurrentSlide(n+1);
+  showSlide('from-right');
+}
+
+arrowLeft.addEventListener('click', function() {
+  if (isEnabled) {
+    previousSlide(currentSlide);
+    changeBackground();
+  }
+})
+
+arrowRight.addEventListener('click', function() {
+  if (isEnabled) {
+    nextSlide(currentSlide);
+    changeBackground();
+  }
+})
+
+function changeBackground(){
+  sliderHome.classList.toggle('background-slide-2');
+}
+
+// BURGER MENU
+burgerButton.addEventListener('click', changeStateBurgerMenu);
+
+function changeStateBurgerMenu(){
+  burgerButton.classList.toggle('burger-button-rotate');
+  burgerOverlay.classList.toggle('visibility');
+  headerNavigation.classList.toggle('visibility');
+  headerLogo.classList.toggle('header-logo-burger')
+}
+
+menu.addEventListener('click', (event) => {
+  let menuElement = event.target.closest('.navigation-item');
+  if (!menuElement) return;
+  changeStateBurgerMenu();
+})
