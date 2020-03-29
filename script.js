@@ -91,7 +91,7 @@ function onScroll () {
     }
   });
 
-  if (cursorPosition >= document.documentElement.scrollHeight - document.documentElement.clientHeight) {
+  if (cursorPosition-3 >= document.documentElement.scrollHeight - document.documentElement.clientHeight) {
     let lastItem = listSections[listSections.length-1];
     menuLinks.forEach((link) => {
       let menuElement = link.closest('.navigation-item');
